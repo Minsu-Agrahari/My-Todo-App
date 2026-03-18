@@ -25,8 +25,13 @@ function addTask(){
 
     delBtn.addEventListener("click", ()=>{
         totalTask--; 
-        updateTotal(); 
-        newTask.remove();
+        updateTotal();
+        // Add removing animation class
+        newTask.classList.add("removing");
+        // Wait for animation to complete before removing
+        setTimeout(() => {
+            newTask.remove();
+        }, 300);
     });
 
     newTask.append(delBtn);
