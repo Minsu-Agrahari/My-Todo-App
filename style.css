@@ -1,0 +1,155 @@
+/* Reset some default styles */
+body, h1, ol, li, input, button {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Arial, sans-serif;
+	background: #18181b;
+	min-height: 100vh;
+	color: #e5e5e5;
+}
+
+header {
+	text-align: center;
+	padding: 2rem 0 1rem 0;
+	background: #23232a;
+	color: #fafafa;
+	box-shadow: 0 2px 8px rgba(24,24,27,0.18);
+}
+
+main {
+	max-width: 420px;
+	margin: 2rem auto;
+	background: #23232a;
+	border-radius: 12px;
+	box-shadow: 0 4px 24px rgba(24,24,27,0.25);
+	padding: 2rem 1.5rem;
+}
+
+section:first-of-type {
+	display: flex;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+#inputTask {
+	flex: 1;
+	padding: 0.7rem 1rem;
+	border: 1px solid #31313a;
+	border-radius: 8px;
+	font-size: 1rem;
+	outline: none;
+	background: #18181b;
+	color: #fafafa;
+	transition: border-color 0.2s;
+}
+#inputTask:focus {
+	border-color: #6366f1;
+}
+
+#addBtnRef {
+	padding: 0.7rem 1.2rem;
+	background: #31313a;
+	color: #fafafa;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
+	box-shadow: 0 2px 8px rgba(24,24,27,0.18);
+}
+#addBtnRef:hover {
+	background: #52525b;
+}
+
+#parentListRef {
+	list-style: decimal inside;
+	padding-left: 0;
+}
+/* Animations */
+@keyframes slideInUp {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideOutDown {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+}
+
+#parentListRef li {
+	background: #18181b;
+	margin-bottom: 0.7rem;
+	padding: 0.7rem 1rem;
+	border-radius: 8px;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0 1px 4px rgba(24,24,27,0.10);
+	color: #fafafa;
+	animation: slideInUp 0.3s ease-out;
+}
+
+#parentListRef li.removing {
+	animation: slideOutDown 0.3s ease-out forwards;
+	background: #5f4240 !important;
+}
+#parentListRef li:last-child {
+	margin-bottom: 0;
+}
+
+#parentListRef button {
+	background: #3f3f46;
+	color: #fafafa;
+	border: none;
+	border-radius: 6px;
+	padding: 0.3rem 0.8rem;
+	font-size: 0.95rem;
+	cursor: pointer;
+	margin-left: 1rem;
+	transition: background 0.2s;
+}
+#parentListRef button:hover {
+	background: #dc2626;
+}
+
+/* Task count styling (if used) */
+#TotalTaskCounter {
+	margin-top: 1.5rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid #31313a;
+	text-align: center;
+	color: #e5e5e5;
+}
+
+#totalTask {
+	font-weight: bold;
+	color: #6366f1;
+	margin-left: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+	main {
+		padding: 1rem 0.5rem;
+	}
+	header {
+		padding: 1.2rem 0 0.7rem 0;
+	}
+}
