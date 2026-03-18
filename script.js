@@ -25,6 +25,7 @@ function addTask(){
 
     delBtn.addEventListener("click", ()=>{
         newTask.remove();
+        updateTotal();
         totalTask--; 
     });
 
