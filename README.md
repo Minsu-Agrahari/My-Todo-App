@@ -66,6 +66,15 @@ Todo-App/
 
 ---
 
+## 🆕 Recent Updates
+
+- Tasks are displayed in a horizontal layout with Delete button beside each task
+- Double-click a task to edit it in-place; press Enter or click away to save
+- All layout and editing styles are handled directly in JavaScript (inline styles)
+- Task editing and deletion animations remain unchanged
+
+---
+
 ## 🔗 Live Demo
 
 🌐 https://my-todo-app-gules-theta.vercel.app/
